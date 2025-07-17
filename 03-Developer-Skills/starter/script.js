@@ -28,6 +28,7 @@ function min(array) {
 function max(array) {
   max = array[0];
   for (let i = 0; i < array.length; i++) {
+    
     if (typeof array[i] != "number") continue;
 
     if (array[i] > max) max = array[i];
@@ -35,4 +36,13 @@ function max(array) {
   return max;
 }
 
-console.log(max(array3));
+
+const printForecast2= function (arr) {
+  let str = "";
+  for (let i = 0; i < arr.length; i++) {
+    str += `... ${arr[i]}°C in ${i + 1} days `; //interesante aca aun string le suma un string
+  }
+  console.log(str);
+}
+printForecast(array3);
+
